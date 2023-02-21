@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 17</title>
+</head>
+<body>
+    <h1>Задача 17</h1>
+    <p>Зашифрувати один введений англійський символ у верхньому регістрі (один з символів: A,B,…Z)  методом зміщення (шифр Цезаря). </p>
+    <script>
+        //Вводимо необхідні дані
+        let symb = (prompt(`Введіть один із символів A B Z`)).toUpperCase();
+        //Знаходимо необхідний результат
+        let numbWord = 2;
+        let minCodeValue = 65;
+        let maxCodeValue = 90;
+        let symbolCode = String.fromCharCode((symb.charCodeAt(0) - minCodeValue + numbWord) % (maxCodeValue - minCodeValue + 1) +minCodeValue)
+        //Виводимо результат
+        document.write(`Буде зашифровано у  ${symbolCode} `);
+        </script>
+</body>
+</html>

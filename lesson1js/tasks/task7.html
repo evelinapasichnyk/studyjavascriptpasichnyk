@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача 7</h1>
+    <p>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня(від 1 до 6).</p>
+    <script>
+        //Вводимо необхідні дані
+        let randMonthMin = 1;
+        let randMonthMax = 12;
+        let randDayMin = 1;
+        let randDayMax = 6;
+        //Знаходимо необхідний результат
+        let randMonth = randMonthMin + Math.floor(Math.random() * (randMonthMax - randMonthMin + 1));
+        let randDays = randDayMin + Math.floor(Math.random() * (randDayMax - randDayMin + 1));
+        let randSum = randMonth + randDays;
+        //Виводимо результат
+        document.write(`Результат : <br> Випадковий номер місяця : ${randMonth} <br> Випадковий номер дня : ${randDays} <br> Сума чих чисел складає : ${randSum} `);
+    </script>
+</body>
+</html>

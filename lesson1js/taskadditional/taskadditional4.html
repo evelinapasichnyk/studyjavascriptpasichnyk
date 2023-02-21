@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 4</title>
+</head>
+<body>
+    <h1>Задача 4</h1>
+    <p>З клавіатури вводиться вік дитини. 
+    Вивести на екран через скільки років вона буде відвідувати садочок, піде у школу, закінчить школу, вступить і закінчить </p>
+    <script>
+        //Вводимо необхідні дані
+        let ageOfChild = parseInt(prompt(`Введіть вік дитини`,1));
+        //Знаходимо необхідний результат
+        // Рахуємо що дитина йде у садочок з 3-х років, до школи з 7-ми.
+        let kidsGardenAge = 3 - ageOfChild;
+        let schoolAge = 7 - ageOfChild;
+        //Виводимо результат
+        document.write(`Ви ввели вік дитини : ${ageOfChild} років. <br> У садочок дитина пійде через ${kidsGardenAge} років.<br> У школу через ${schoolAge} років.`);
+        
+        </script>
+</body>
+</html>

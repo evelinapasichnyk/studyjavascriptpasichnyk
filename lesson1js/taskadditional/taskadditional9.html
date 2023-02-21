@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 9</title>
+</head>
+<body>
+    <h1>Задача 9</h1>
+    <p>Скласти програму для розв’язування задачі: 
+        йде N-а секунда доби, 
+        визначити скільки повних годин і 
+        повних хвилин пройшло до цього моменту.
+    </p>
+    <script>
+        //Вводимо необхідні дані
+        let secN = parseInt(prompt(`Введіть кількість секунд`,2000));
+        //Знаходимо необхідний результат
+        let mins = secN / 60;
+        mins = Math.trunc(mins);
+        let hours;
+        hours = mins / 60;
+        hours = Math.trunc(hours);
+        let fullHours = hours; 
+        for(mins; mins > 60; fullHours++ , mins -= 60){
+            if(mins < 60) break;
+        }
+        //Виводимо результат
+        document.write(`Ви ввели ${secN}, це ${mins} хвилин та ${fullHours} годин. `);
+        </script>
+</body>
+</html>

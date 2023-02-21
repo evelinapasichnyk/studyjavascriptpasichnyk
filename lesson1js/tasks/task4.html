@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4</title>
+</head>
+<body>
+    <h1>Задача 4</h1>
+    <p>Дано довжину у сантиметрах. Визначити скількі це метрів і кілометрів.</p>
+    <script>
+        //Вводимо необхідні дані
+        let lengthSentimeters = parseFloat(prompt(`Введіть довжину у сантиметрах`, 35));
+        //Знаходимо необхідний результат
+        let lengthMeters = lengthSentimeters / 100;
+        let lenghtKilometers = lengthMeters / 1000;
+        //Виводимо результат
+        document.write(` Ви ввели ${lengthSentimeters} сантиметрів, що дорівнює ${lengthMeters} метрів та ${lenghtKilometers} кілометрів.`);
+    </script>
+</body>
+</html>

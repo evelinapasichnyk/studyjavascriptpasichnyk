@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 7</title>
+</head>
+<body>
+    <h1>Задача 7</h1>
+    <p>Скласти алгоритм, який обчислює цілу і дробову частину даного числа х. Наприклад: число 23,56  => ціла: 23, дробова: 0,56.</p>
+    <script>
+        //Вводимо необхідні дані
+        let numberChoice = parseFloat(prompt(`ВВЕДІТЬ БУДЬ-ЛАСКА ЧИСЛО З ЧАСТКОЮ (НАПРИКЛАД 28.789)`,278.39));
+        //Знаходимо необхідний результат
+        let integer = Math.trunc(numberChoice);
+        let fraction = numberChoice % integer;
+        //Виводимо результат
+        document.write(`Ви ввели число : ${numberChoice} <br> його ціла частина : ${integer} <br> Його дробова частина : ${fraction.toFixed(2)} `);
+        </script>
+</body>
+</html>

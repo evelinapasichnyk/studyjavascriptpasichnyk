@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 11</title>
+</head>
+<body>
+    <h1>Задача 11</h1>
+    <p>Дано поточну кількість годи, хвилин, секунд (як на годиннику). Визначити 1) яка кількість секунд буде на годиннику через N секунд.
+        2) яка кількість хвилин буде на годиннику через N секунд, X хвилин.
+    </p>
+    <script>
+        //Вводимо необхідні дані
+        let scnd = parseInt(prompt(`Введіть кількість секунд від 1 до 60`,7));
+        let mnt = parseInt(prompt(`Введіть кількість хвилин від 1 до 60`,7));
+        let hrs = parseInt(prompt(`Введіть кількість годин від 1 до 24`,7));
+        let n = parseInt(prompt(`Введіть будь-яке число`,7));
+        let x = parseInt(prompt(`Введіть кількість хвилин`,7));
+        let y= parseInt(prompt(`введіть кількість секунд`,7));
+        //Знаходимо необхідний результат
+        //1)
+        let scndRslt = scnd + n;
+        for(scndRslt; scndRslt > 60; scndRslt - 60){
+            if(scndRslt < 60) break;
+        }
+        
+        //2)
+        y //кількість вводних секунд
+        x //кіллькість вводних хвилин
+        let scnds = scnd + y;
+        for (scnds; scnds > 60; csnds - 60, mnt++){
+            if(scnds < 60) break;
+        } 
+        let mntRslt = mnt + x;
+    
+        //Виводимо результат
+        document.write(`Ви ввели ${scnd} секунд. Через ${n} секунд буде на годиннику ${scndRslt} секунд.<br> Ви ввели ${x} хвилин та ${y} секунд. На годиннику було на той час ${mnt} . Через цей час на годиннику буде ${mntRslt} хвилин. `);
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 16</title>
+</head>
+<body>
+    <h1>Задача 16</h1>
+    <p>З клавіатури вводиться номер місяця. Визначити, який буде місяць через вказану кількість N місяців.</p>
+    <script>
+        //Вводимо необхідні дані
+        let numbMonth = parseInt(prompt(`Введіть номер місяця від 1 до 12`,7));
+        let monthAmoun = parseInt(prompt(`Введіть кількість місяців`,5));
+        let minMonth = 1;
+        let maxMonth = 12;
+
+        //Знаходимо необхідний результат
+        let monthAgo = (numbMonth - minMonth + monthAmoun) % (maxMonth - minMonth +1) + minMonth;
+        //Виводимо результат
+        document.write(`Через ${monthAmoun} місяців буде  ${monthAgo} місяць. `);
+        </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 2</title>
+</head>
+<body>
+    <h1>Задача 1</h1>
+    <p>Знайти суму, добуток та частку двох дійсних чисел. Результати вивести у формі таблиці.</p>
+    <script>
+        //Вводимо необхідні дані
+        let numOne = parseFloat(prompt('Введіть будь-яку цифру', 7));
+        let numTwo = parseFloat(prompt('Введіть будь-яку цифру', 7));
+        //Знаходимо необхідний результат
+        let frstRslt = numOne + numTwo;
+        let scndRslt = numOne * numTwo;
+        let thrdRslt = numOne / numTwo;
+        //Виводимо результат
+        document.write(`Ви ввели ${numOne} та ${numTwo}`);
+        let rows = 1; 
+        let cells = 3;
+        let body = document.getElementsByTagName("body")[0];
+        let table     = document.createElement("table");
+        let tableBody = document.createElement("tbody");
+for (let j = 0; j < rows; j++) {
+    let row = document.createElement("tr");
+        let cell = document.createElement("td");
+        let cellText = document.createTextNode(`Сума:  ${frstRslt} , додаток ${scndRslt} та частка ${thrdRslt}`);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+    tableBody.appendChild(row);
+}
+table.appendChild(tableBody);
+body.appendChild(table);
+    </script>
+</html>

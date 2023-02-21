@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task additional 3</title>
+</head>
+<body>
+    <h1>Задача 3</h1>
+    <p>З клавіатури вводяться вартість одиниці та кількість одиниць двох товарів. 
+    Вивести на екран вартість кожного з видів товарів окремо і загальну вартість.</p>
+    <script>
+        //Вводимо необхідні дані
+        let costOfBook = parseFloat(prompt(`Введіть вартість книги`, 175));
+        let valueOfBooks = parseInt(prompt(`Введіть кількість одиниць`,3));
+        let costOfToy = parseFloat(prompt(`Введіть вартість іграшки`,79));
+        let valueOfToys = parseInt(prompt(`Введіть кількість іграшок`,2));
+        //Знаходимо необхідний результат
+        let commonValueBooks = costOfBook * valueOfBooks;
+        let commonValueToys = costOfToy * valueOfToys;
+        let commonValueArticle = commonValueBooks + commonValueToys;
+        //Виводимо результат
+        document.write(`
+            <h2> Ваш заказ складає :</h2> 
+            <p> Кількість книг : ${valueOfBooks} * ${costOfBook} грн. = ${commonValueBooks} грн. </p>
+            <p>Кількість іграшок : ${valueOfToys} * ${costOfToy} грн. = ${commonValueToys} грн. </p>
+            <h3>Загальна вартість:</h3>
+            <p> ${commonValueArticle} грн.  </p>
+        `)
+        </script>
+</body>
+</html>

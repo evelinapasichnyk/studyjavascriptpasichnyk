@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задача </h1>
+    <p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+    Обчислити вартість кожного товару окремо та загальну вартість. 
+    Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+    <script>
+        //Вводимо необхідні дані
+        let costOfPants = parseFloat(prompt(`Введіть вартість товару штанів`, 134));
+        let valueOfPants = parseInt(prompt(`Введіть кількість одиниць штанів`,5));
+        let costOfTop = parseFloat(prompt(`Введіть вартість товару футболок`, 134));
+        let valueOfTop = parseInt(prompt(`Введіть кількість одиниць футболок`,5));
+        let costOfSkirt = parseFloat(prompt(`Введіть вартість товару юбок`, 134));
+        let valueOfSkirt = parseInt(prompt(`Введіть кількість одиниць юбок`,5));
+        //Знаходимо необхідний результат
+        let commonCostOfPants = costOfPants * valueOfPants;
+        let commonCostOfTop = costOfTop * valueOfTop;
+        let commonCostOfSkirt = costOfSkirt * valueOfSkirt;
+        let commonCostOfClothes = commonCostOfPants + commonCostOfTop + commonCostOfSkirt;
+        //Виводимо результат
+        document.write(`
+        <table>
+            <tr>
+                <td>ЧЕК</td>
+            </tr>
+            <tr>
+                <td> Вартість одиниці штанів ${costOfPants} грн * ${valueOfPants} одиниць товару = ${commonCostOfPants} грн.</td>
+            </tr>
+            <tr>
+                <td>Вартість одиниці футболок ${costOfTop} грн * ${valueOfTop} одиниць товару = ${commonCostOfTop} грн.</td>
+            </tr>
+            <tr>
+                <td>Вартість одиниці юбок ${costOfSkirt} грн * ${valueOfSkirt} одиниць товару = ${commonCostOfSkirt} грн.</td>
+            </tr>
+            <tr>
+                <td>Загальна вартість обраних товарів складає : ${commonCostOfClothes} грн. </td>
+            </tr>
+        </table>
+        `)
+    </script>
+</body>
+</html>
